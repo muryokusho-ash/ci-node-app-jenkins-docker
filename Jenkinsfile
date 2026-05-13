@@ -1,12 +1,6 @@
 pipeline {
     agent any
     stages {
-        stage("Clone") {
-            steps {
-                git branch: 'main', url: "https://github.com/muryokusho-ash/ci-node-app-jenkins-docker.git"
-            }
-        }
-
         stage("Install Dependencies") {
             steps {
                 bat "npm install"
