@@ -33,5 +33,10 @@ pipeline {
                 bat "docker run -d -p 3000:3000 --name ci-jenkins-container ci-node-app-jenkins"
             }
         }
+        stage("Check container logs"){
+            steps{
+                bat "docker logs ci-jenkins-container"
+            }
+        }
     }
 }
