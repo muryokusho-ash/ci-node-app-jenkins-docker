@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage("Clone") {
             steps {
-                git 
-                    branch: 'main', url: "https://github.com/muryokusho-ash/ci-node-app-jenkins-docker.git"
+                git branch: 'main', url: "https://github.com/muryokusho-ash/ci-node-app-jenkins-docker.git"
             }
         }
 
